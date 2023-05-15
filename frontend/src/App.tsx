@@ -1,9 +1,9 @@
-
+import Controller from "./components/Controller"
 
 function App() {
   return (
     <div className="App">
-      <div className=" text-2xl">Hello</div>
+      <Controller/>
     </div>
   )
 }
