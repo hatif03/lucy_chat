@@ -17,10 +17,7 @@ openai.api_key = config("OPEN_AI_API_KEY")
 
 def upload_audio_to_assembly(audio_file):
     try:
-        with open("audi.mp3" , "rb") as f:
-            response = requests.post(base_url + "/upload",
-                                    headers=headers,
-                                    data=f)
+        response = requests.post(base_url + "/upload", headers=headers, data=audio_file)
 
         upload_url = response.json()["upload_url"]
         data = {
